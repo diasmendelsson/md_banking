@@ -20,10 +20,10 @@ export default function Sidebar({user}){
                         alt="horizon logo"
                         className="size-[24px]
                         max-xl:size-14"/>
-                        <h1 className="sidebar-logo">Horizon</h1>
+                        <h1 className="sidebar-logo">MD Banking</h1>
                 </Link>
                 {sidebarLinks.map((item)=>{
-                    const isActive = pathname === item.route || pathname.startsWith(`${item.route}`)
+                    const isActive = pathname === item.route || pathname.startsWith(`${item.route}/`)
                     return(
                         <Link className={cn('sidebar-link',{'bg-bank-gradient': isActive})}
                         href={item.route}
